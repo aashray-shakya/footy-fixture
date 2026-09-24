@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Sports Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'LiveScores')">Live Scores</button>
+            <button class="tab-button" onclick="openTab(event, 'Fixtures')">Fixtures</button>
+            <button class="tab-button" onclick="openTab(event, 'Standings')">Standings</button>
+        </div>
+
+        <div id="LiveScores" class="tab-content active">
+            <h2>Live Scores</h2>
+            <p>Content for Live Scores tab goes here.</p>
+        </div>
+
+        <div id="Fixtures" class="tab-content">
+            <h2>Fixtures</h2>
+            <p>Content for Fixtures tab goes here.</p>
+        </div>
+
+        <div id="Standings" class="tab-content">
+            <h2>Standings</h2>
+            <p>Content for Standings tab goes here.</p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Initialize the first tab
+        document.getElementById("LiveScores").style.display = "block";
+    </script>
+</body>
+</html>
