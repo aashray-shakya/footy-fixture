@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function fetchMatchData() {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const apiKey = process.env.FOOTBALL_DATA_API_KEY; // Use environment variable
     const url = `https://api.football-data.org/v2/matches?apiToken=${apiKey}`;
 
     try {
