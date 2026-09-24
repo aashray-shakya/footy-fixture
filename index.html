@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Sports Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="dashboard">
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
         <div class="tabs">
-            <button class="tab-button active" onclick="openTab(event, 'LiveScores')">Live Scores</button>
-            <button class="tab-button" onclick="openTab(event, 'Fixtures')">Fixtures</button>
-            <button class="tab-button" onclick="openTab(event, 'Standings')">Standings</button>
+            <button class="tab-button active px-4 py-2 rounded bg-gray-800 hover:bg-gray-700" onclick="openTab(event, 'LiveScores')">Live Scores</button>
+            <button class="tab-button px-4 py-2 rounded bg-gray-800 hover:bg-gray-700" onclick="openTab(event, 'Fixtures')">Fixtures</button>
+            <button class="tab-button px-4 py-2 rounded bg-gray-800 hover:bg-gray-700" onclick="openTab(event, 'Standings')">Standings</button>
         </div>
 
-        <div id="LiveScores" class="tab-content active">
-            <h2>Live Scores</h2>
-            <p>Content for Live Scores tab goes here.</p>
+        <div id="LiveScores" class="tab-content active p-4 rounded bg-gray-800 shadow-lg">
+            <h2 class="text-xl font-bold mb-2">Live Scores</h2>
+            <p class="text-gray-400">Content for Live Scores tab goes here.</p>
         </div>
 
-        <div id="Fixtures" class="tab-content">
-            <h2>Fixtures</h2>
-            <p>Content for Fixtures tab goes here.</p>
+        <div id="Fixtures" class="tab-content p-4 rounded bg-gray-800 shadow-lg">
+            <h2 class="text-xl font-bold mb-2">Fixtures</h2>
+            <p class="text-gray-400">Content for Fixtures tab goes here.</p>
         </div>
 
-        <div id="Standings" class="tab-content">
-            <h2>Standings</h2>
-            <p>Content for Standings tab goes here.</p>
+        <div id="Standings" class="tab-content p-4 rounded bg-gray-800 shadow-lg">
+            <h2 class="text-xl font-bold mb-2">Standings</h2>
+            <p class="text-gray-400">Content for Standings tab goes here.</p>
         </div>
     </div>
 

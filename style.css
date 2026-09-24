@@ -2,20 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #121212;
+    color: #ffffff;
 }
 
-.dashboard {
-    width: 80%;
-    margin: 50px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tabs {
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #333;
 }
 
 .tab-button {
@@ -29,16 +27,43 @@ body {
 }
 
 .tab-button:hover {
-    background-color: #ddd;
+    background-color: #555;
 }
 
 .tab-button.active {
-    background-color: #ccc;
+    background-color: #777;
 }
 
 .tab-content {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-top: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Glassmorphism effect */
+.glass {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Modern card layout */
+.card {
+    @apply bg-gray-800 shadow-lg rounded-lg p-4;
+}
+
+.card-header {
+    @apply text-xl font-bold mb-2;
+}
+
+.card-content {
+    @apply text-gray-400;
 }
