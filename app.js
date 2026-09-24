@@ -1,6 +1,6 @@
 // app.js
 document.addEventListener('DOMContentLoaded', () => {
-    fetchMatchData();
+    loadMockData();
 });
 
 async function fetchMatchData() {
